@@ -79,7 +79,7 @@ def eval_ao_kpts(cell, coords, kpts=None, deriv=0, relativity=0,
     from types import SimpleNamespace
     if kpts is None:
         if 'kpt' in kwargs:
-            logger.warn(SimpleNamespace(verbose=verbose), 
+            logger.warn(SimpleNamespace(verbose=verbose),
                         'KNumInt.eval_ao function finds keyword '
                         'argument "kpt" and converts it to "kpts"')
             kpts = kwargs['kpt']

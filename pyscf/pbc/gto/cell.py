@@ -1435,7 +1435,7 @@ class Cell(mole.MoleBase):
             if np.linalg.norm(_a[2]) < 0.7 * Lz_guess:
                 logger.warn(self, 'Size of vacuum may not be enough. The '
                                   'recommended vacuum size is '
-                                  '%s AA (%s Bohr)' 
+                                  '%s AA (%s Bohr)'
                                   % (Lz_guess*param.BOHR, Lz_guess))
 
         if self.mesh is None or self._mesh_from_build:

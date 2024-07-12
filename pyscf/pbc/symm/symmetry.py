@@ -173,7 +173,7 @@ class Symmetry():
         else:
             if not cell._built:
                 logger.warn(self, '%s must be initialized before calling '
-                                  'Symmetry. Initialize %s in %s' 
+                                  'Symmetry. Initialize %s in %s'
                                   % (cell, cell, self))
                 cell.build()
 
