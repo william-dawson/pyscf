@@ -77,8 +77,8 @@ def eval_ao_kpts(cell, coords, kpts=None, deriv=0, relativity=0,
     '''
     if kpts is None:
         if 'kpt' in kwargs:
-            sys.stderr.write('WARN: KNumInt.eval_ao function finds keyword '
-                             'argument "kpt" and converts it to "kpts"\n')
+            logger.warn(self, 'KNumInt.eval_ao function finds keyword '
+                              'argument "kpt" and converts it to "kpts"')
             kpts = kwargs['kpt']
         else:
             kpts = numpy.zeros((1,3))
@@ -1159,8 +1159,9 @@ class KNumInt(lib.StreamObject, numint.LibXCMixin):
                kpts=None, kpts_band=None, max_memory=2000, verbose=None, **kwargs):
         if kpts is None:
             if 'kpt' in kwargs:
-                sys.stderr.write('WARN: KNumInt.nr_rks function finds keyword '
-                                 'argument "kpt" and converts it to "kpts"\n')
+                logger.warn(self, 'KNumInt.nr_rks function finds '
+                                  'keyword argument "kpt" and converts it '
+                                  'to "kpts"')
                 kpts = kwargs['kpt']
             else:
                 kpts = self.kpts
@@ -1174,8 +1175,9 @@ class KNumInt(lib.StreamObject, numint.LibXCMixin):
                kpts=None, kpts_band=None, max_memory=2000, verbose=None, **kwargs):
         if kpts is None:
             if 'kpt' in kwargs:
-                sys.stderr.write('WARN: KNumInt.nr_uks function finds keyword '
-                                 'argument "kpt" and converts it to "kpts"\n')
+                logger.warn(self, 'KNumInt.nr_uks function finds '
+                                  'keyword argument "kpt" and converts it '
+                                  'to "kpts"')
                 kpts = kwargs['kpt']
             else:
                 kpts = self.kpts

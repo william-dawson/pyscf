@@ -514,7 +514,7 @@ class SCF(mol_hf.SCF):
     def __init__(self, cell, kpt=np.zeros(3),
                  exxdiv=getattr(__config__, 'pbc_scf_SCF_exxdiv', 'ewald')):
         if not cell._built:
-            sys.stderr.write('Warning: cell.build() is not called in input\n')
+            logger.warn(self, 'cell.build() is not called in input')
             cell.build()
         mol_hf.SCF.__init__(self, cell)
 
