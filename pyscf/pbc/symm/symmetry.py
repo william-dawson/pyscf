@@ -16,7 +16,6 @@
 # Authors: Xing Zhang <zhangxing.nju@gmail.com>
 #
 
-import sys
 import copy
 from functools import reduce
 import numpy as np

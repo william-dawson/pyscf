@@ -17,7 +17,6 @@
 #         Qiming Sun <osirpt.sun@gmail.com>
 #
 
-import sys
 import numpy
 from pyscf import lib
 from pyscf.dft import numint

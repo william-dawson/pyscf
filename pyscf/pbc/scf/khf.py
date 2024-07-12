@@ -25,8 +25,6 @@ See Also:
     hf.py : Hartree-Fock for periodic systems at a single k-point
 '''
 
-import sys
-
 from functools import reduce
 import numpy as np
 import scipy.linalg
