@@ -28,6 +28,7 @@ from pyscf.dft.gen_grid import NBINS, CUTOFF, ALIGNMENT_UNIT
 from pyscf.pbc.dft.gen_grid import make_mask, BLKSIZE
 from pyscf.pbc.lib.kpts_helper import is_zero, KPT_DIFF_TOL
 from pyscf.pbc.lib.kpts import KPoints
+from pyscf.lib import logger
 
 
 def eval_ao(cell, coords, kpt=numpy.zeros(3), deriv=0, relativity=0, shls_slice=None,
