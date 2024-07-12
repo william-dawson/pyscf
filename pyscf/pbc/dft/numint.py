@@ -76,10 +76,12 @@ def eval_ao_kpts(cell, coords, kpts=None, deriv=0, relativity=0,
         ao_kpts: (nkpts, [comp], ngrids, nao) ndarray
             AO values at each k-point
     '''
+    from types import SimpleNamespace
     if kpts is None:
         if 'kpt' in kwargs:
-            logger.warn(self, 'KNumInt.eval_ao function finds keyword '
-                              'argument "kpt" and converts it to "kpts"')
+            logger.warn(SimpleNamespace(verbose=verbose), 
+                        'KNumInt.eval_ao function finds keyword '
+                        'argument "kpt" and converts it to "kpts"')
             kpts = kwargs['kpt']
         else:
             kpts = numpy.zeros((1,3))
